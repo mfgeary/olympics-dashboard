@@ -1,0 +1,130 @@
+
+version: 2
+
+models:
+  - name: country
+    description: "Countries competing in the Olympics"
+    columns:
+      - name: country_id
+        description: "Unique identifier for the country"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: code
+        description: "Country code"
+        data_type: string
+      - name: name
+        description: "Country name"
+        data_type: string
+
+  - name: athlete
+    description: "Athletes competing in the Olympics"
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for the athlete"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Athlete name"
+        data_type: string
+      - name: sex
+        description: "Athlete gender"
+        data_type: string
+
+  - name: event
+    description: "Events in the Olympics"
+    columns:
+      - name: event_id
+        description: "Unique identifier for the event"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Event name"
+        data_type: string
+      - name: sport_id
+        description: "Sport identifier"
+        data_type: integer
+  
+  - name: sport
+    description: "Sports in the Olympics"
+    columns:
+      - name: sport_id
+        description: "Unique identifier for the sport"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Sport name"
+        data_type: string
+
+  - name: game
+    description: "Olympic games"
+    columns:
+      - name: game_id
+        description: "Unique identifier for the game"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: year
+        description: "Year of the game"
+        data_type: integer
+      - name: season
+        description: "Season of the game"
+        data_type: string
+      - name: city
+        description: "City of the game"
+        data_type: string
+
+  - name: medal
+    description: "Medals awarded in the Olympics"
+    columns:
+      - name: medal_id
+        description: "Unique identifier for the medal"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: type
+        description: "Medal type"
+        data_type: string
+
+  - name: result
+    description: "Results of events in the Olympics"
+    columns:
+      - name: result_id
+        description: "Unique identifier for the result"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: athlete_id
+        description: "Athlete identifier"
+        data_type: integer
+      - name: event_id
+        description: "Event identifier"
+        data_type: integer
+      - name: game_id
+        description: "Game identifier"
+        data_type: integer
+      - name: medal_id
+        description: "Medal identifier"
+        data_type: integer
+      - name: country_id
+        description: "Country identifier"
+        data_type: integer
+      - name: age
+        description: "Athlete age"
+        data_type: integer
+      - name: height
+        description: "Athlete height"
+        data_type: integer
+      - name: weight
+        description: "Athlete weight"
+        data_type: integer
