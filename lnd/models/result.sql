@@ -23,14 +23,4 @@ FROM {{ ref('athlete_events') }}
     ON "Medal" = m.type
 )
 
--- select count(*) from (
--- select distinct *
---     -- "ID", "Name", "Sex", "Age", "Weight", "Height", --done
---     -- "Team", "NOC", --done
---     -- "Games", "Year", "Season", "City", --done
---     -- "Event", "Sport", --done
---     -- "Medal" --done
--- from {{ ref('athlete_events') }}
--- ) as subq
-
 select count(*) from res
