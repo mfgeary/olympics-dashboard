@@ -128,3 +128,19 @@ models:
       - name: weight
         description: "Athlete weight"
         data_type: integer
+      - name: team_id
+        description: "Team identifier"
+        data_type: integer
+    
+  - name: team
+    description: "Teams in the Olympics"
+    columns:
+      - name: team_id
+        description: "Unique identifier for the team"
+        data_type: integer
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Team name"
+        data_type: string
