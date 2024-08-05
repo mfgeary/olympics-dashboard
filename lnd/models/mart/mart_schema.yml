@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+
+  - name: medals_by_country_by_games
+    label: "Medals by country by games"
+    type: dashboard
+    maturity: low
+    description: "Medals by country by games"
+
+    depends_on:
+      - ref('medals')
+      - ref('results')
+      - ref('games')
+      - ref('countries')
+
+    owner:
+      name: Marion Bauman
+      email: marion.bauman@riospartners.com

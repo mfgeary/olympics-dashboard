@@ -59,3 +59,18 @@ Runtime Error
 [0m15:32:14.435620 [debug] [MainThread]: Command `dbt docs generate` failed at 15:32:14.435546 after 0.07 seconds
 [0m15:32:14.435888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105019a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105065010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105065450>]}
 [0m15:32:14.436146 [debug] [MainThread]: Flushing usage events
+[0m15:48:20.155984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e192d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e2a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e4ef10>]}
+
+
+============================== 15:48:20.159918 | bdae2913-7f8e-4ef6-9ca2-0b8dada813e2 ==============================
+[0m15:48:20.159918 [info ] [MainThread]: Running with dbt=1.8.4
+[0m15:48:20.160385 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'invocation_command': 'dbt run', 'no_print': 'None', 'empty': 'False', 'use_experimental_parser': 'False', 'debug': 'False', 'introspect': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'log_path': 'logs', 'profiles_dir': '/Users/mariongeary/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_format': 'default', 'warn_error': 'None', 'use_colors': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'fail_fast': 'False'}
+[0m15:48:20.160818 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mariongeary/Desktop/beach-summer-2024/olympic-data/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:48:20.162254 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.051786125, "process_user_time": 0.759532, "process_kernel_time": 0.116525, "process_mem_max_rss": "101138432", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:48:20.162628 [debug] [MainThread]: Command `dbt run` failed at 15:48:20.162561 after 0.05 seconds
+[0m15:48:20.162879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104df8fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100cf77d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a8a050>]}
+[0m15:48:20.163109 [debug] [MainThread]: Flushing usage events

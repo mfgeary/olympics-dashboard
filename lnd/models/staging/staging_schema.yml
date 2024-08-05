@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: country
+  - name: countries
     description: "Countries competing in the Olympics"
     columns:
       - name: country_id
@@ -18,7 +18,7 @@ models:
         description: "Country name"
         data_type: string
 
-  - name: athlete
+  - name: athletes
     description: "Athletes competing in the Olympics"
     columns:
       - name: athlete_id
@@ -34,7 +34,7 @@ models:
         description: "Athlete gender"
         data_type: string
 
-  - name: event
+  - name: events
     description: "Events in the Olympics"
     columns:
       - name: event_id
@@ -50,7 +50,7 @@ models:
         description: "Sport identifier"
         data_type: integer
   
-  - name: sport
+  - name: sports
     description: "Sports in the Olympics"
     columns:
       - name: sport_id
@@ -63,7 +63,7 @@ models:
         description: "Sport name"
         data_type: string
 
-  - name: game
+  - name: games
     description: "Olympic games"
     columns:
       - name: game_id
@@ -82,7 +82,7 @@ models:
         description: "City of the game"
         data_type: string
 
-  - name: medal
+  - name: medals
     description: "Medals awarded in the Olympics"
     columns:
       - name: medal_id
@@ -95,7 +95,7 @@ models:
         description: "Medal type"
         data_type: string
 
-  - name: result
+  - name: results
     description: "Results of events in the Olympics"
     columns:
       - name: result_id
@@ -132,7 +132,7 @@ models:
         description: "Team identifier"
         data_type: integer
     
-  - name: team
+  - name: teams
     description: "Teams in the Olympics"
     columns:
       - name: team_id
