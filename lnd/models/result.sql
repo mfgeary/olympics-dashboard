@@ -1,6 +1,5 @@
--- Create the final results table that combines all tables to get
--- each individual's final Olympic results.
-with res as (SELECT DISTINCT
+SELECT DISTINCT
+    ROW_NUMBER() OVER () as result_id,
     athlete_id,
     country_id,
     game_id,
@@ -21,6 +20,4 @@ FROM {{ ref('athlete_events') }}
     ON "Event" = e.name
     JOIN {{ ref('medal') }} as m
     ON "Medal" = m.type
-)
-
-select count(*) from res
+GROUP BY athlete_id, country_id, game_id, event_id, medal_id, team_id, age, height, weight
