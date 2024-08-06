@@ -1,19 +1,32 @@
 version: 2
 
-exposures:
-
+models:
   - name: medals_by_country_by_games
-    label: "Medals by country by games"
-    type: dashboard
-    maturity: low
     description: "Medals by country by games"
-
-    depends_on:
-      - ref('medals')
-      - ref('results')
-      - ref('games')
-      - ref('countries')
-
-    owner:
-      name: Marion Bauman
-      email: marion.bauman@riospartners.com
+    columns:
+      - name: count
+        description: "Number of medals"
+        data_type: integer
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: false
+      - name: year
+        description: "Year of the game"
+        data_type: integer
+        data_tests:
+          - not_null
+      - name: season
+        description: "Season of the game"
+        data_type: string
+        data_tests:
+          - not_null
+      - name: team_country
+        description: "Country of the team"
+        data_type: integer
+        data_tests:
+          - not_null
+      - name: medal_type
+        description: "Type of medal"
+        data_type: string
